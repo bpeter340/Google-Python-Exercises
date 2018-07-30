@@ -71,9 +71,12 @@ def print_words(filename):
 def print_top(filename):
   dict = file_helper(filename)
   order = sorted(dict.items(), key = last, reverse = True)
+  count = 1
   
   for k in order:
-    print k[0], k[1]
+    if count <= 20:
+      print k[0], k[1]
+      count += 1
 
 #Used to get dictionary value    
 def last (use):
