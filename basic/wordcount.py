@@ -50,6 +50,7 @@ def file_helper(filename):
   file = open(filename, 'rU') 
   text = file.read().lower()
   words = text.split()
+  file.close()
   
   dict = {}
   
@@ -58,6 +59,7 @@ def file_helper(filename):
       dict[word] += 1
     else:
       dict[word] = 1
+      
   return dict
  
 # First task
